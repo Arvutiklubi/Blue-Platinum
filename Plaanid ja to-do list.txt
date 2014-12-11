@@ -1,0 +1,11 @@
+TODO:
+1) Hendrik paneb paika engine'i
+2) Kaardi lugemine failist
+3) Peategelane ja liikumine
+
+
+lihtne pealtvaates rpg
+real-time strateegiline combta erinevate abilititega
+ruutudest koosnev kaart
+kunstistiili veel ei ole
+
