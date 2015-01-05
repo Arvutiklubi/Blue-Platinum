@@ -17,30 +17,40 @@ def init():
     floor_tile_raw = pygame.transform.scale(floor_tile_raw, (320, 320))
     floor_tiles = {
         '1' : floor_tile_raw.subsurface((0, 0, 64, 64)),
-        '2' : floor_tile_raw.subsurface((64, 0, 64, 64)),
-        '3' : floor_tile_raw.subsurface((128, 0, 64, 64)),
-        '4' : floor_tile_raw.subsurface((192, 0, 64, 64)),
-        '5' : floor_tile_raw.subsurface((256, 0, 64, 64)),
-        '50' : floor_tile_raw.subsurface((0, 64, 64, 64)),
-        '51' : floor_tile_raw.subsurface((64, 64, 64, 64)),
+        '70' : floor_tile_raw.subsurface((64, 0, 64, 64)),
+        '2' : floor_tile_raw.subsurface((128, 0, 64, 64)),
+        '60' : floor_tile_raw.subsurface((192, 0, 64, 64)),
+        '61' : floor_tile_raw.subsurface((256, 0, 64, 64)),
+        '59' : floor_tile_raw.subsurface((0, 64, 64, 64)),
+        '58' : floor_tile_raw.subsurface((64, 64, 64, 64)),
+        '57' : floor_tile_raw.subsurface((128, 64, 64, 64)),
+        '56' : floor_tile_raw.subsurface((192, 64, 64, 64)),
+        '55' : floor_tile_raw.subsurface((256, 64, 64, 64)),
+        '54' : floor_tile_raw.subsurface((0, 128, 64, 64)),
+        '53' : floor_tile_raw.subsurface((64, 128, 64, 64)),
+        '52' : floor_tile_raw.subsurface((128, 128, 64, 64)),
+        '62' : floor_tile_raw.subsurface((192, 128, 64, 64)),
+        '63' : floor_tile_raw.subsurface((256, 128, 64, 64)),
+        '3' : floor_tile_raw.subsurface((0, 192, 64, 64)),
+        '0' : floor_tile_raw.subsurface((256, 256, 64, 64)),
+        
         }
 
-    map_layout = [[1, 1, 1, 51, 1, 1, 1, 2, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 3, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 2, 1, 1, 1, 1, 1, 1, 51, 1, 2, 1],
-                  [1, 1, 1, 51, 1, 1, 50, 1, 1, 1, 3, 1, 51, 1, 1, 1],
-                  [1, 2, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 4, 1, 2, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 1, 1, 3],
-                  [1, 50, 1, 51, 1, 3, 1, 1, 1, 2, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 1, 4, 51, 1, 1, 1],
-                  [51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51],
-                  [1, 1, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 2, 1, 1],
-                  [1, 2, 1, 51, 1, 1, 1, 1, 1, 1, 1, 1, 51, 1, 1, 1],
-                  [1, 1, 1, 51, 1, 3, 1, 1, 1, 1, 1, 1, 51, 1, 1, 1],
+    map_layout = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,63,63,63,63,63,63,57],
+                  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,2,2,2,2,2,2,60],
+                  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,2,2,2,2,70,2,60],
+                  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,2,2,2,2,2,2,60],
+                  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,2,2,2,2,2,2,60],
+                  [0,0,0,0,56,63,63,63,63,63,57,0,0,0,0,0,0,61,2,2,2,2,2,2,60],
+                  [0,0,0,0,61,2,2,2,2,2,60,0,0,0,0,0,0,61,2,2,2,2,2,2,60],
+                  [0,0,0,0,61,2,2,70,2,2,54,63,63,63,63,63,63,55,2,2,2,2,2,2,60],
+                  [56,63,63,63,55,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,60],
+                  [61,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,3,2,2,60],
+                  [61,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,60],
+                  [61,2,70,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,60],
+                  [61,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,1,2,53,62,62,62,62,62,59],
+                  [61,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,60],
+                  [58,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,59],
                   ]
 
     char_pos = [8, 8]
@@ -89,7 +99,7 @@ def on_event(event, ms):
                 
                     start_pos[1] = map_pos[1]
                     char_direction = 'N'
-                    char_move_speed = 128
+                    char_move_speed = 192
 
                     char_pos[1] -= 1
                 
@@ -98,7 +108,7 @@ def on_event(event, ms):
                     
                     start_pos[1] = map_pos[1]
                     char_direction = 'S'
-                    char_move_speed = 128
+                    char_move_speed = 192
 
                     char_pos[1] += 1
                 
@@ -107,7 +117,7 @@ def on_event(event, ms):
                     
                     start_pos[0] = map_pos[0]
                     char_direction = 'W'
-                    char_move_speed = 128
+                    char_move_speed = 192
 
                     char_pos[0] -= 1
                 
@@ -116,7 +126,7 @@ def on_event(event, ms):
                     
                     start_pos[0] = map_pos[0]
                     char_direction = 'E'
-                    char_move_speed = 128
+                    char_move_speed = 192
 
                     char_pos[0] += 1
 
@@ -155,6 +165,8 @@ def draw(screen, ms):
             map_pos[0] = start_pos[0] - 64
 
     if char_direction == '0' :
+        
+        #lahutab tegelase asukohast ekraanil tegelase asukoha kaardil, et saada kaardi asukoht ekraanil
         map_pos[0] = 368 - char_pos[0]*64
         map_pos[1] = 268 - char_pos[1]*64
         
